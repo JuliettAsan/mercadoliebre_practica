@@ -9,7 +9,8 @@ body{
     background-color:#ebebeb ;
 }
 
-header div.logo{
+header div.logo,
+header .form{
     width: 50%;
 }
 
@@ -24,16 +25,27 @@ header .form .input{
     outline: none;
     color: #666;
     padding: 2px;
-    margin: 2%;
 }
 
 header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
-    width: 5%;
-    margin: 2%;
+     width: 10%;
 }
+
+header div.cabecera{
+    display: flex;
+    flex-wrap: wrap;
+}    
+
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+
 
 header{
     background-color:#EAC926;
@@ -91,27 +103,54 @@ main section article{
 }
 
 main section article i{
+    display: block;
     color: #39b54a;
     border: 1px solid #39b54a;
     border-radius: 50%;
     font-size: 16px;
     padding: 4px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
-.productos{
+.menu-articulo{
     border: 1px solid #ebebeb;
     margin: 10px 0px;
     padding: 15px;
 }
 
-
-
 main section article img{
     width: 100%;
-    border-bottom: 2px solid #ebebeb;
+
 }
 
+article div.menu-articulo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
 
+div.productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.precio{
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuento{
+    width: 70%;
+}
 
 div.credit-card{
     text-align: center;
@@ -136,6 +175,36 @@ div.shield i{
     color: #0044AA;
 }
 
-@media(max-width: 361px){
-    .descripcion{display:none;
-}}
+@media (min-width: 361px){
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+    
+    .precio,.descuento{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
+        
+    .burger-menu{
+        display: none;
+    }
+
+    .site{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
