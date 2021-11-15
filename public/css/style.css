@@ -71,11 +71,11 @@ p{
 }
 
 .precio{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .descuento{
-    font-size: 16px;
+    font-size: 14px;
     color: #39b54a;
 }
 
@@ -109,6 +109,7 @@ main{
 
 main section article{
     background-color: white;
+    margin-bottom: 10px;
 }
 
 main section article i{
@@ -207,7 +208,7 @@ div.shield{
 
 footer{
     width: 90%;
-    margin: 10px;
+    margin: 0px auto;
 }
 
 div.pie{
@@ -215,7 +216,7 @@ div.pie{
     flex-wrap: wrap;
     justify-content:space-between;
     text-align: center;
-    margin:1%;
+    margin-top: 20px;
     background-color: white;
 }
 
@@ -270,6 +271,7 @@ footer section article div.shield:hover i{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
+        text-align: center;
     }
 }
 
