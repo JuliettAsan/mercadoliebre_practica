@@ -14,6 +14,12 @@ header .form{
     width: 50%;
 }
 
+header nav{
+    display: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
 header ul li a{
     text-decoration: none;
     color: #000;
@@ -53,6 +59,7 @@ header{
 
 h3{
     font-size: 24px;
+    color: #666;
 }
 
 h4{
@@ -73,7 +80,9 @@ p{
 }
 
 .descripcion{
+    display: none;
     font-size: 16px;
+    color: #666;
 }
 
 div.burger-menu{
@@ -117,8 +126,11 @@ main section article i{
     top: -15px;
 }
 
+main section h3{
+    margin:20px 0px;
+}
+
 .menu-articulo{
-    border: 1px solid #ebebeb;
     margin: 10px 0px;
     padding: 15px;
 }
@@ -152,27 +164,87 @@ div.productos{
     width: 70%;
 }
 
-div.credit-card{
-    text-align: center;
+div.ultima-visitva,
+div.ofertas{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-div.credit-card i{
+main section div.productos article i{
+    transition: transform 1s;
+}
+
+main section div.productos article:hover i{
+    transform: rotateZ(-90deg);
+}
+
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+}
+
+main section article:hover .descripcion{
+    display: block;
+}
+
+.login input[type="sumbit"]:hover,
+.register input[type="submit"]:hover{
+    background-color: #0022AA;
+}
+
+div.credit-card i,
+div.gift i,
+div.shield i{
     color: #0044AA;
+    font-size: 2em;
+    margin: 10px;
 }
 
-div.gift{
-    text-align: center;
-}
-
-div.gift i{
-    color: #0044AA;
-}
+div.gift,
+div.credit-card,
 div.shield{
     text-align: center;
 }
 
-div.shield i{
-    color: #0044AA;
+footer{
+    width: 90%;
+    margin: 10px;
+}
+
+div.pie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    text-align: center;
+    margin:1%;
+    background-color: white;
+}
+
+footer section article{
+    background-color: white;
+    width:250px;
+}
+
+article div.informacion-ad{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+
+footer section article div.credit-card:hover i{
+    color: #EAC926;
+}
+
+footer section article div.gift:hover i{
+    color: #EAC926;
+}
+
+footer section article div.shield:hover i{
+    color: #EAC926;
 }
 
 @media (min-width: 361px){
@@ -191,6 +263,14 @@ div.shield i{
     .precio,.descuento{
         width: 50%;
     }
+    
+    footer section div.pie{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
 
 @media (min-width: 769px){
@@ -198,13 +278,32 @@ div.shield i{
         width: 22%;
     }
         
+    header nav{
+        display: block;
+    }
+
     .burger-menu{
         display: none;
     }
 
-    .site{
+    .listas{
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .lista1{
+        display: flex;
+        justify-content: space-evenly; 
+        width: 50%;
+        padding: 10px;    
+    }
+
+    .lista2{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        width: 50%;
+        padding: 10px;    
     }
 }
